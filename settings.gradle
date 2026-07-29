@@ -1,1 +1,12 @@
 rootProject.name = 'eshop-modular-monoliths'
+
+include 'api'
+include 'catalog'
+include 'basket'
+include 'ordering'
+include 'shared'
+
+project(':api').projectDir = file('bootstrapper/api')
+project(':catalog').projectDir = file('modules/catalog')
+project(':basket').projectDir = file('modules/basket')
+project(':ordering').projectDir = file('modules/ordering')
